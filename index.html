@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lucky Sevens!</title>
+  </head>
+  <body>
+
+    <noscript>
+        <div>
+          This website needs javascript to work
+        </div> 
+    </noscript>
+
+    <div class="container">
+         <h1 class="main-heading">Lucky Sevens</h1>
+    </div>
+
+    <section id="main-game">
+      <div class="container">
+        <div class="row">
+          <div class="col-md"> </div>
+
+            <div class="col-md-8 col-sm-12" style="text-align: center;">
+              <span style="font-size: 30px;">Starting Bet:</span> <input type="number" placeholder="$0.00" id="bet-amount">
+            </div>
+
+        <div class="col-md"></div>
+      </div>
+
+
+        <div class="row">
+          <div class="col-sm-12" style="text-align: center;">
+            <button id="play-button"  class="btn btn-primary-outline button-shadow" onclick="loadGame()" >Play</button>
+          </div>
+        </div>
+    
+    </div>
+  </section>
+    
+
+
+    <section class="errors">
+      <div class="container">
+        <div id="negative">
+          <p class="text-danger">Bet cannot be negative!!</p>
+        </div>
+
+        <div id="poorly-formatted">
+          <p class="text-danger">Bet is not valid format!! Must Be #.##</p>
+        </div>
+
+        <div id="empty-bet">
+          <p class="text-danger">Must enter a bet!!</p>
+        </div>
+
+        <div id="min-amount">
+          <p class="text-danger">Bet must be $1.00 or more!!</p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+    <section id="results">
+      <div class="line-break"></div>
+
+
+      <div class="container">
+
+        <h1 class="result-header">Results</h1>
+
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Starting Bet</th>
+            <th style="width: 30%;" id="starting-bet">$####.##</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Total Rolls Before Going Broke</td>
+            <td id="total-rolls">###</td>
+          </tr>
+          <tr>
+            <td>Highest Amount Won</td>
+            <td id="highest-amount">####.##</td>
+          </tr>
+          <tr>
+            <td>Roll Count at Highest Amount Won</td>
+            <td id="highest-amount-rollcount">###</td>
+          </tr>
+        </tbody>
+      </table>
+
+      </div>
+
+    </section>
+
+
+    <!--   JavaScript -->
+    <script src="main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
